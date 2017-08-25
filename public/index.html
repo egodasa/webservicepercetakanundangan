@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/stylesheets/w3.css">
+<link rel="stylesheet" href="/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css">
+<script src="/javascripts/angular.js"></script>
+<script src="/javascripts/angular-route.js"></script>
+<script src="/javascripts/angular-id.js"></script>
+<script src="/javascripts/angular-animate.js"></script>
+<script src="/javascripts/angular-cookies.js"></script>
+<script src="/javascripts/ngStorage.js"></script>
+<script src="/config/app.js"></script>
+<script src="/config/routes.js"></script>
+<body ng-app="skripsi" class="w3-white">
+<div class="w3-modal" style="{{loading}}">
+	<div class="w3-modal-content">
+		<div class="w3-display-container">
+			<div class="w3-display-middle w3-section"><i class="fa fa-circle-o-notch fa-spin w3-text-blue-gray" style="font-size:50px;"></i></div>
+		</div>
+	</div>
+</div>
+<div class="w3-sidebar w3-blue-gray w3-bar-block w3-collapse w3-card-2 w3-animate-left" style="width:200px;{{menu}}">
+  <button class="w3-bar-item w3 w3-button w3-large w3-hide-large" ng-click="toggleMenu(0)">Menu &times;</button>
+  <a href="#!/" class="w3-bar-item w3-button">Beranda</a>
+  <a href="#!form" class="w3-bar-item w3-button">Form</a>
+  <a href="#!artikel" class="w3-bar-item w3-button">Artikel</a>
+  <a href="#!list" class="w3-bar-item w3-button">List</a>
+  <a href="#!detail" class="w3-bar-item w3-button">Detail Produk</a>
+  <a href="#!tabel" class="w3-bar-item w3-button">Tabel</a>
+</div>
+
+<div class="w3-main" style="margin-left:200px">
+<div class="w3-bar w3-teal">
+	<button class="w3-xlarge w3-bar-item w3-button w3-hover-red w3-hide-large" ng-click="toggleMenu(1)"><i class="fa fa-bars"></i></button>
+	<button class="w3-xlarge w3-bar-item w3-button w3-hover-light-gray">Nala the Cat</button>
+</div>
+
+<div class="w3-row-padding" ng-view>
+
+</div>
+   <div class="w3-bar w3-teal w3-margin-top">
+	<div class="w3-container">
+		<button class="w3-bar-item w3-button w3-hover-teal">
+			<h5>Thx to W3CSS,NodeJS and AngularJS</h5>
+		</button>
+	</div>
+</div>
+</div>
+</body>
+</html>
